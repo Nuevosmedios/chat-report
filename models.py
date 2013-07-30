@@ -7,12 +7,12 @@ class MessageArchive(Base):
 
     __tablename__ = 'ofMessageArchive'
 
-    conversationID = Column(u'conversationID', Integer, primary_key=True,
+    conversationID = Column(u'conversationID', Integer, primary_key=False,
                             nullable=False)
     fromJID = Column(u'fromJID', String(255), primary_key=False,
                      nullable=False)
     toJID = Column(u'toJID', String(255), primary_key=False, nullable=False)
-    sentDate = Column(u'sentDate', Integer, primary_key=False, nullable=False)
+    sentDate = Column(u'sentDate', Integer, primary_key=True, nullable=False)
     body =  Column(u'body', Text, primary_key=False)
     fromJIDResource = Column(u'fromJIDResource', String(255),
                              primary_key=False)
