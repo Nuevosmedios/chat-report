@@ -4,7 +4,7 @@ from models import MessageArchive
 app = Flask(__name__)
 
 @app.route("/reporte.csv")
-def generate_report():
+def report():
     chatroom = request.args.get('chatroom')
     def generate():
         data = MessageArchive.query.filter(MessageArchive.toJID.like(chatroom)).order_by(MessageArchive.sentDate).all()
