@@ -1,5 +1,5 @@
 from database import db_session, Base
-from sqlalchemy.dialects.mysql import *
+#from sqlalchemy.dialects.mysql import *
 from sqlalchemy import *
 
 
