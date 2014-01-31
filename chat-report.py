@@ -42,7 +42,9 @@ def report_to_html():
     objects = []
     for d in data:
         date = datetime.fromtimestamp(d.sentDate / 1e3)
-        objects.append((str(date), d.toJIDResource.replace('\\20', ' '), d.body.replace('\n', ''),))
+        objects.append((str(date),
+                        d.toJIDResource.replace('\\20', ' ').replace('\\40', '@'),
+                        d.body.replace('\n', '').replace('|c:3|', ''),))
     return render_template('report.html', objects=objects)
 
 
