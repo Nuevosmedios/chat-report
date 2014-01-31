@@ -1,12 +1,26 @@
+## The following requirements were added by pip --freeze:
+CairoSVG==1.0.4
 Flask==0.10.1
 Flask-MySQL==1.2
 Flask-SQLAlchemy==1.0
+Flask-WeasyPrint==0.4
 Jinja2==2.7
 MarkupSafe==0.18
 MySQL-python==1.2.4
+Pyphen==0.9.1
 SQLAlchemy==0.8.2
+WeasyPrint==0.21
 Werkzeug==0.9.3
+argparse==1.2.1
+cairocffi==0.5.1
+cffi==0.8.1
+cssselect==0.9.1
 gunicorn==17.5
+html5lib==0.999
 ipython==0.13.2
 itsdangerous==0.22
+lxml==3.3.0
+pycparser==2.10
+six==1.5.2
+tinycss==0.3
 wsgiref==0.1.2
