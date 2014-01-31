@@ -1,0 +1,28 @@
+<!DOCTYPE html>   
+<html lang="en">   
+  <head>   
+    <meta charset="utf-8">   
+    <title>Reporte de chat</title>   
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+  </head>  
+  <body> 
+    <table class="table table-striped">
+      <thead>
+	<tr>
+	  <th>Fecha</th>  
+	  <th>Nombre</th>  
+	  <th>Mensaje</th>  
+	</tr>
+      <thead>
+	<tbody>  
+          
+    {% for object in objects %}
+    <tr>
+    {% for field in object %}
+    <td>{{ field }}</td>
+    {% endfor %}
+    </tr>
+    {% endfor %}
+    </tbody>  
+      </table>
+</table>
