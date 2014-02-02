@@ -1,5 +1,5 @@
 <!DOCTYPE html>   
-<html lang="en">   
+<html lang="es">
   <head>   
     <meta charset="utf-8">   
     <title>Reporte de chat</title>   
@@ -15,14 +15,14 @@
 	</tr>
       <thead>
 	<tbody>  
-          
-    {% for object in objects %}
-    <tr>
-    {% for field in object %}
-    <td>{{ field }}</td>
-    {% endfor %}
-    </tr>
-    {% endfor %}
-    </tbody>  
-      </table>
-</table>
+	  {% for object in objects %}
+	  <tr>
+	    {% for field in object %}
+	    <td>{{ field }}</td>
+	    {% endfor %}
+	  </tr>
+	  {% endfor %}
+	</tbody>  
+    </table>
+  </body>
+</html>
