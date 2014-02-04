@@ -7,7 +7,7 @@ from models import MessageArchive
 app = Flask(__name__)
 
 
-@app.route("/reporte/")
+@app.route("/reporte.csv/")
 def report_to_html():
     chatroom = request.args.get('chatroom')
     begin_date = request.args.get('begin_date')
@@ -28,7 +28,7 @@ def report_to_html():
     return render_template('report.html', objects=objects)
 
 
-@app.route('/reporte.csv/')
+@app.route('/reporte.pdf/')
 def report_to_pdf():
     chatroom = request.args.get('chatroom')
     begin_date = request.args.get('begin_date')
