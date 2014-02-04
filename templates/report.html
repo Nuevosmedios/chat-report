@@ -2,27 +2,46 @@
 <html lang="es">
   <head>   
     <meta charset="utf-8">   
-    <title>Reporte de chat</title>   
+    <title>Reporte de chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='print.css') }}" media="print"/>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
   </head>  
-  <body> 
-    <table class="table table-striped">
-      <thead>
-	<tr>
-	  <th>Fecha</th>  
-	  <th>Nombre</th>  
-	  <th>Mensaje</th>  
-	</tr>
-      <thead>
-	<tbody>  
-	  {% for object in objects %}
+  <body>
+    <form>
+      <div class="panel panel-default">
+	<div class="panel-body" align="center">
+	  <button type="button" class="btn btn-default btn-lg" onclick="window.print();return false;">
+	    <span class="glyphicon glyphicon-print"></span> Imprimir/Generar PDF
+	  </button>
+	</div>
+      </div>
+    </form>
+    <div class="print">
+      <table class="table table-striped">
+	<thead>
 	  <tr>
-	    {% for field in object %}
-	    <td>{{ field }}</td>
-	    {% endfor %}
+	    <th>Fecha y hora</th>  
+	    <th>Nombre</th>  
+	    <th>Mensaje</th>  
 	  </tr>
-	  {% endfor %}
-	</tbody>  
-    </table>
+	<thead>
+	  <tbody>  
+	    {% for object in objects %}
+	    <tr>
+	      {% for field in object %}
+	      <td>{{ field }}</td>
+	      {% endfor %}
+	    </tr>
+	    {% endfor %}
+	  </tbody>  
+      </table>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-body" align="center">
+	<button type="button" class="btn btn-default btn-lg" onclick="window.print();return false;">
+	  <span class="glyphicon glyphicon-print"></span> Imprimir/Generar PDF
+	</button>
+      </div>
+    </div>
   </body>
 </html>
