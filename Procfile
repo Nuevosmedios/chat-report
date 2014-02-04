@@ -1,1 +1,1 @@
-web: gunicorn chat-report:app
+web: python main.py

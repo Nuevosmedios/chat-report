@@ -12,6 +12,7 @@ SQLAlchemy==0.8.2
 WeasyPrint==0.21
 Werkzeug==0.9.3
 argparse==1.2.1
+backports.ssl-match-hostname==3.4.0.2
 cairocffi==0.5.1
 cffi==0.8.1
 cssselect==0.9.1
@@ -23,4 +24,5 @@ lxml==3.3.0
 pycparser==2.10
 six==1.5.2
 tinycss==0.3
+tornado==3.2
 wsgiref==0.1.2
